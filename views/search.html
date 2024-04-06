@@ -1,0 +1,58 @@
+{{extend ("./layout")}} {{#block ("head")}}
+<link rel="stylesheet" href="/www/css/search.css">{{/block}} {{#block ("body")}}<div class="search" ng-app="movielist">
+    <div class="search-bar">
+        <div class="filter-item"><a href="/">首页</a> <a href="/play">VIP影院</a>> <a href="#">搜索</a></div>
+    </div>
+    <div class="search-content w">
+        {{#if (movies !== undifind && movies !== null && movies.length > 0)}}
+        <div class="search-con-l">
+            {{#each (movies) }}
+            <ul>
+                <li>
+                    <div class="search-content-left" style="background-color:#f30">
+                        <a href="/play/{{this.url}}"><img src="{{this.img}}" width='100%' height='100%' /></a>
+                    </div>
+                    <div class="search-content-right">
+                        <div class="search-content-title">
+                            <a style="color:#f30" href="/play/{{this.url}}">{{this.title}}</a> 
+                        </div>
+                        <div class="search-con">发布时间：{{this.createTime}}</div>
+                        <div class="search-con">简介: {{this.description}}...</div>
+                    </div>
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+        <div class="search-con-r">
+            <ul class="search-tab">
+                <li><a id="intheater" href="#/in_theaters" style="color:red;font-weight:700">正在热映</a></li>
+                <li><a id="coming" href="#/coming_soon">即将上映</a></li>
+                <li><a id="top250" href="#/top250">TOP250</a></li>
+            </ul>
+            <ul class="search-tab-con">
+                <li>
+                    <div class="search-tab-con-r">
+                        <table width="100%" style="font-size:15px">
+                            <thead>
+                                <tr style="text-align:left">
+                                    <th width="154px" style="text-align:left">名称</th>
+                                    <th width="154px" style="text-align:center">类型</th>
+                                    <th width="154px" style="text-align:center">上映时间</th>
+                                    <th width="154px" style="text-align:center">评分</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div ng-view=""></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        {{/if}}
+    </div>
+
+</div>{{/block}} {{#block ("foot")}}
+<script src="/www/js/angular.js"></script>
+<script src="/www/js/angular-route.min.js"></script>
+<script src="/www/js/movielist/app.js"></script>
+<script src="/www/js/movielist/in_theaters/module.js"></script>
+<script src="/www/js/movielist/components/http-service.js"></script>{{/block}}
