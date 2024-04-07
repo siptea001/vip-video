@@ -1,5 +1,5 @@
 /*
-* @Author: xiugang
+* @Author: crypto
 * @Time: 20180722
 * @Desc: 实现一个类似于JQuery功能的框架
 * V 1.0: 实现了基础框架、事件框架、CSS框架、属性框架、内容框架、动画框架的搭建
@@ -30,7 +30,7 @@
     // String对象方法的扩充
     function stringExtend() {
         // str = 'name: @(name), age:@(age)'
-        // data = {name : 'xiugang', age : 18}
+        // data = {name : 'crypto', age : 18}
         /**
          * 实现一个简单的数据绑定
          * @param str
@@ -1143,7 +1143,7 @@
         /**
          * 【使用模板来实现一个简单的数据绑定】
          * 实现简单的数据绑定： @（name）, @(sex)
-         * data: var user = {name : 'xiugang', role, '钻石会员'}
+         * data: var user = {name : 'crypto', role, '钻石会员'}
          * str: = '欢迎@(name)， 等级：@(role)光临本站！';
          * @param str   原始的数据格式
          * @param data  需要绑定的数据对象，是一个json格式的数据， json = {name : 'xiuxiu', age : 18}
@@ -1814,7 +1814,7 @@
                     }
                 } else if (typeof arg[0] === 'object') {
                     // 如果要获取一系列对象的属性信息, 如果传过来的一个参数是一个json对象的话，这里也采用这种方式
-                    // {name : xiugang, age : 18}
+                    // {name : crypto, age : 18}
                     for (var item in arg[0]) {
                         // 从后向前开始遍历，设置模式
                         for (; j >= 0; j--) {
@@ -2264,7 +2264,7 @@
             return this[0].className.trim() === val.trim() ? true : false;
         },
         /**
-         * 添加一个class class='xiugang 18 nan'
+         * 添加一个class class='crypto 18 nan'
          * @param val
          */
         addClass: function (val) {

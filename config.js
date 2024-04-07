@@ -17,5 +17,5 @@ module.exports = {
     port: 8888,
     database : 'video',
     user : 'root',
-    password : '123456'
+    password : 'vip_dba_321'
 }
