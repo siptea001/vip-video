@@ -13,9 +13,9 @@ module.exports = {
     parseUrl : 'https://jx.aidouer.net/?url=',         // 解析地址
     movielist : [] ,                                                         // 存储了用户获取的电影列表信息
     userlist : 0,
-    host : 'localhost',
-    port: 8888,
+    host : '0.0.0.0',
+    port: 3000,
     database : 'video',
     user : 'root',
-    password : 'vip_dba_321'
+    password : '123456'
 }

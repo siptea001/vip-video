@@ -1,4 +1,7 @@
 "use strict";
+
+const config = require('../../config');
+
 ! function () {
 	function o ( t, n ) {
 		var e = "con" + +new Date,
@@ -28,7 +31,7 @@
 			}
 	}
 	window.onload = function () {
-		var t = io.connect( "http://localhost:8888" );
+		var t = io.connect( `http://${config.host}:${config.port}` );
 		t.emit( "foo", "login" ), c( t ), $( "#commit-comment" )
 			.on( "click", function ( t ) {
 				var e = $( "#comment-form" )

@@ -101,7 +101,7 @@ vip-video:
  ```
     git clone https://github.com/siptea001/vip-video.git
  ```
- - 2. 进入程序的主目录（包含app.js的那个文件夹）运行命令：npm install，系统就会自动安装该程序的依赖包；
+ - 2. 进入程序的主目录（包含app.js的那个文件夹）运行命令：pnpm install，系统就会自动安装该程序的依赖包；
  - 3. 在以上的步骤都执行完成且正确的情况下，就可以在程序主目录下面（有app.js的那个目录）,运行命令
  ```
     npm start
